@@ -1462,3 +1462,69 @@ body.modal-open {
 .service-single .service-details .content .list i {
     color: var(--cottle-construction-orange);
 }
+
+/* Privacy policy & legal pages */
+.legal-page-content h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-page-updated {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.legal-page-content h2 {
+    font-size: 1.35rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.legal-page-content p,
+.legal-page-content li {
+    line-height: 1.75;
+    color: #444;
+}
+
+.legal-page-content ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.legal-page-content a {
+    color: var(--cottle-construction-navy, #0a2540);
+    text-decoration: underline;
+}
+
+.legal-page-content a:hover {
+    color: var(--cottle-construction-orange, #e67e22);
+}
+
+.copyright-sep {
+    opacity: 0.6;
+}
+
+.quote-privacy-note {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.quote-privacy-note a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.quote-privacy-note a:hover {
+    color: #fff;
+}
+
+.quote-modal .quote-privacy-note {
+    color: #6c757d;
+}
+
+.quote-modal .quote-privacy-note a:hover {
+    color: var(--cottle-construction-navy, #0a2540);
+}
