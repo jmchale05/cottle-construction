@@ -27,6 +27,17 @@
 
     <script>
         (function () {
+            try {
+                if (sessionStorage.getItem('cottleSubpageEnter') === '1') {
+                    sessionStorage.removeItem('cottleSubpageEnter');
+                    document.documentElement.classList.add('cottle-subpage-pending');
+                }
+            } catch (error) {}
+        })();
+    </script>
+
+    <script>
+        (function () {
             var key = new URLSearchParams(window.location.search).get('service') || 'building-structural';
             var headerSlug = key === 'interiors-installations' ? 'interiors' : key;
             var headerImage = 'assets/img/header/' + headerSlug + '-header.png';
@@ -168,7 +179,7 @@
                 <div class="row">
                     <div class="col-12 text-center text-lg-start">
                         <p class="copyright-text">
-                            &copy; Copyright <span id="date"></span> <a href="#"> Cottle Construction Ltd </a> All Rights Reserved.
+                            &copy; Copyright <span id="date"></span> <a href="index.html"> Cottle Construction Ltd </a> All Rights Reserved.
                         </p>
                     </div>
                 </div>

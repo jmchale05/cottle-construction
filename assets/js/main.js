@@ -330,9 +330,118 @@ Version         : 1.0
     });
 
     if ($('.subpage-mobile-bar').length) {
-        $('.subpage-mobile-bar').toggleClass('is-visible', $(window).scrollTop() > 120);
+        function updateSubpageMobileBar() {
+            $('.subpage-mobile-bar').toggleClass('is-visible', $(window).scrollTop() > 120);
+        }
+
+        $(window).on('scroll', updateSubpageMobileBar);
+        updateSubpageMobileBar();
     }
 
+    (function initSubpageTransitions() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+
+        var subpageFiles = {
+            'individual-service.html': true,
+            'portfolio-single.html': true
+        };
+
+        function getPageName(pathname) {
+            var parts = pathname.split('/');
+            return parts[parts.length - 1] || '';
+        }
+
+        function isSubpageLink(href) {
+            if (!href || href.charAt(0) === '#') {
+                return false;
+            }
+
+            if (/^(mailto:|tel:|javascript:)/i.test(href)) {
+                return false;
+            }
+
+            var url;
+
+            try {
+                url = new URL(href, window.location.href);
+            } catch (error) {
+                return false;
+            }
+
+            if (url.origin !== window.location.origin) {
+                return false;
+            }
+
+            return !!subpageFiles[getPageName(url.pathname)];
+        }
+
+        function revealSubpage() {
+            if (!document.documentElement.classList.contains('cottle-subpage-pending')) {
+                return;
+            }
+
+            document.documentElement.classList.remove('cottle-subpage-pending');
+
+            window.requestAnimationFrame(function () {
+                document.body.classList.add('cottle-subpage-reveal');
+                window.setTimeout(function () {
+                    document.body.classList.remove('cottle-subpage-reveal');
+                }, 320);
+            });
+        }
+
+        window.addEventListener('pageshow', function (event) {
+            if (event.persisted) {
+                document.body.classList.remove('cottle-page-exit');
+            }
+        });
+
+        if (document.body.classList.contains('cottle-subpage')) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', revealSubpage, { once: true });
+            } else {
+                revealSubpage();
+            }
+        }
+
+        $(document).on('click', 'a[href]', function (event) {
+            if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                return;
+            }
+
+            if (this.target && this.target !== '_self') {
+                return;
+            }
+
+            var href = $(this).attr('href');
+            if (!isSubpageLink(href)) {
+                return;
+            }
+
+            var targetUrl = new URL(href, window.location.href);
+            var currentPage = getPageName(window.location.pathname);
+            var targetPage = getPageName(targetUrl.pathname);
+            var sameDocument = targetPage === currentPage &&
+                targetUrl.search === window.location.search;
+
+            if (sameDocument) {
+                return;
+            }
+
+            event.preventDefault();
+            document.body.classList.add('cottle-page-exit');
+
+            try {
+                sessionStorage.setItem('cottleSubpageEnter', '1');
+            } catch (error) {}
+
+            window.setTimeout(function () {
+                window.location.href = targetUrl.href;
+            }, 260);
+        });
+    })();
 
     // navbar — transparent on hero, navy when scrolled
     function updateNavbarOnScroll() {
@@ -386,9 +495,18 @@ Version         : 1.0
         }
 
         isNavScrolling = true;
+        var scrollTop = Math.max(0, $target.offset().top - getHeaderOffset());
+
+        if (duration === 0) {
+            window.scrollTo(0, scrollTop);
+            isNavScrolling = false;
+            setActiveNavLink(hash);
+            updateNavbarOnScroll();
+            return;
+        }
 
         $('html, body').stop(true).animate({
-            scrollTop: $target.offset().top - getHeaderOffset()
+            scrollTop: scrollTop
         }, duration || 800, function () {
             isNavScrolling = false;
             setActiveNavLink(hash);
@@ -405,7 +523,13 @@ Version         : 1.0
         if (offcanvas) {
             offcanvas.hide();
         }
+
+        $('.mobile-menu-icon').blur();
     }
+
+    $('#offcanvasNavbar').on('hidden.bs.offcanvas', function () {
+        $('.mobile-menu-icon').blur();
+    });
 
     $('.navbar-nav .nav-link[href^="#"], .navbar-brand[href^="#"], .offcanvas-brand[href^="#"], .hero-btn a[href^="#"], .about-area a[href^="#"]').on('click', function (e) {
         var hash = $(this).attr('href');
@@ -423,14 +547,13 @@ Version         : 1.0
     });
 
     if (window.location.hash && navSections.indexOf(window.location.hash) !== -1) {
-        setTimeout(function () {
-            scrollToSection(window.location.hash, 0);
-            setActiveNavLink(window.location.hash);
-        }, 100);
+        setActiveNavLink(window.location.hash);
     }
 
-    $(window).on('scroll', updateActiveNavOnScroll);
+    updateNavbarOnScroll();
     updateActiveNavOnScroll();
+
+    $(window).on('scroll', updateActiveNavOnScroll);
 
 
     // countdown

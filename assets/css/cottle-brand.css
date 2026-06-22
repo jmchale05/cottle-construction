@@ -197,7 +197,21 @@ b,
 #services,
 #portfolio,
 #contact {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 96px;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+@media (max-width: 991px) {
+    #home,
+    #about,
+    #services,
+    #portfolio,
+    #contact {
+        scroll-margin-top: 88px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1117,6 +1131,32 @@ html {
 @media (min-width: 992px) {
     .subpage-mobile-bar {
         display: none;
+    }
+}
+
+/* Fade out when opening a service or portfolio page */
+body.cottle-page-exit {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.26s ease;
+}
+
+/* Fade in on service / portfolio pages after navigation */
+html.cottle-subpage-pending body.cottle-subpage {
+    opacity: 0;
+}
+
+body.cottle-subpage.cottle-subpage-reveal {
+    opacity: 1;
+    transition: opacity 0.28s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.cottle-page-exit,
+    html.cottle-subpage-pending body.cottle-subpage,
+    body.cottle-subpage.cottle-subpage-reveal {
+        opacity: 1 !important;
+        transition: none !important;
     }
 }
 

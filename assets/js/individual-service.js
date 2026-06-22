@@ -55,7 +55,7 @@
                 'Careful protection of existing finishes.',
                 'Honest advice on what is worth doing first.'
             ],
-            why: 'Clients trust us for renovations because we are practical, reliable, and easy to deal with. We tell you what needs doing, what can wait, and how to get the best result for your budget. That honest, organised approach is what keeps homes across the region in great shape.'
+            why: 'Clients across Merseyside trust us for renovations because we are practical, reliable, and easy to deal with. We tell you what needs doing, what can wait, and how to get the best result for your budget. That honest, organised approach is what keeps homes in great shape.'
         },
         landscaping: {
             title: 'Landscaping',
@@ -71,7 +71,7 @@
                 'Garden transformations planned around your budget.',
                 'Proper ground preparation and drainage considered.'
             ],
-            why: 'Outdoor projects need the same care as indoor builds. We bring construction standards to landscaping — solid foundations, correct falls, and neat finishes — so your garden looks great and performs well through the seasons. That is why homeowners recommend us for patios, decking, and fencing work.'
+            why: 'Outdoor projects need the same care as indoor builds. We bring construction standards to landscaping across Merseyside — solid foundations, correct falls, and neat finishes — so your garden looks great and performs well through the seasons.'
         }
     };
 

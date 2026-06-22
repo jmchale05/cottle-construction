@@ -38,6 +38,19 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
+@media (min-width: 992px) {
+    html.cottle-hash-nav .header,
+    html.cottle-hash-nav .header .main-navigation,
+    html.cottle-hash-nav .header .navbar {
+        background: #0B1445 !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+html.cottle-hash-pending {
+    visibility: hidden;
+}
+
 .header-logo-circle,
 .navbar-brand.header-logo-circle {
     display: flex;
@@ -397,13 +410,6 @@
         background-color: #0B1445;
     }
 
-    .header,
-    .header .main-navigation,
-    .header .navbar,
-    .header .navbar > .container {
-        background: #0B1445 !important;
-    }
-
     .header.is-scrolled,
     .header.is-scrolled .main-navigation,
     .header.is-scrolled .navbar {
@@ -412,7 +418,10 @@
 
     .navbar .offcanvas,
     .navbar .offcanvas-header,
-    .navbar .offcanvas-body {
+    .navbar .offcanvas-body,
+    .header:not(.is-scrolled) .navbar .offcanvas,
+    .header:not(.is-scrolled) .navbar .offcanvas-header,
+    .header:not(.is-scrolled) .navbar .offcanvas-body {
         background: #0B1445 !important;
     }
 
@@ -489,8 +498,14 @@
     }
 
     .mobile-menu-icon:hover,
-    .mobile-menu-icon:focus {
+    .mobile-menu-icon:focus-visible {
         color: #FFC400 !important;
+        outline: none;
+        box-shadow: none !important;
+    }
+
+    .mobile-menu-icon:focus:not(:focus-visible) {
+        color: #ffffff !important;
         outline: none;
         box-shadow: none !important;
     }
@@ -635,18 +650,16 @@
     }
 }
 
-/* Hero header — fully transparent until scroll (desktop only) */
-@media (min-width: 992px) {
-    .header:not(.is-scrolled),
-    .header:not(.is-scrolled) .main-navigation,
-    .header:not(.is-scrolled) .navbar,
-    .header:not(.is-scrolled) .navbar .offcanvas,
-    .header:not(.is-scrolled) .navbar .offcanvas-body,
-    .header:not(.is-scrolled) .navbar > .container {
-        background: transparent !important;
-        box-shadow: none !important;
-    }
+/* Hero header — transparent top bar until scroll (menu offcanvas stays navy on mobile) */
+.header:not(.is-scrolled),
+.header:not(.is-scrolled) .main-navigation,
+.header:not(.is-scrolled) .navbar,
+.header:not(.is-scrolled) .navbar > .container {
+    background: transparent !important;
+    box-shadow: none !important;
+}
 
+@media (min-width: 992px) {
     .header:not(.is-scrolled) .navbar .nav-right {
         border-left-color: rgba(255, 255, 255, 0.2);
     }
