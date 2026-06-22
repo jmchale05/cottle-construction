@@ -191,6 +191,8 @@ html.cottle-hash-pending {
         width: 300px;
         height: 300px;
         padding: 20px;
+        background: transparent !important;
+        box-shadow: none !important;
     }
 
     .header:not(.is-scrolled) .navbar-brand.header-logo-circle img {
@@ -660,6 +662,18 @@ html.cottle-hash-pending {
 }
 
 @media (min-width: 992px) {
+    .header:not(.is-scrolled) .navbar .offcanvas,
+    .header:not(.is-scrolled) .navbar .offcanvas-body {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .header:not(.is-scrolled) .header-logo-circle,
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
     .header:not(.is-scrolled) .navbar .nav-right {
         border-left-color: rgba(255, 255, 255, 0.2);
     }

@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
-$toEmail = 'jonathanmchale8@gmail.com';
-$headerEmail = 'jonathanmchale8@gmail.com';
+$toEmail = 'cottlecnstructionltd@hotmail.com';
+$headerEmail = 'cottlecnstructionltd@hotmail.com';
 
 $nameErr = $emailErr = $phoneErr = $serviceErr = $messageErr = '';
 $name = $email = $phone = $service = $message = '';
@@ -87,7 +87,7 @@ if ($mail_send) {
 
 exit(json_encode([
     'status' => 'error',
-    'msg' => 'Your quote request could not be sent. Please call us on 0151 638 4838.',
+    'msg' => 'Your quote request could not be sent. Please call us on 07776 879715.',
 ]));
 
 function input_data($data) {

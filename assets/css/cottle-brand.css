@@ -147,9 +147,14 @@ b,
 
 .header.is-scrolled .main-navigation,
 .navbar.sticky,
-.navbar.fixed-top,
-.offcanvas-header {
+.navbar.fixed-top {
     background: #0B1445 !important;
+}
+
+@media (max-width: 991px) {
+    .offcanvas-header {
+        background: #0B1445 !important;
+    }
 }
 
 .navbar .nav-link {

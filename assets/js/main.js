@@ -5,6 +5,118 @@
     
     "use strict";
 
+    (function initSubpageTransitions() {
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var subpageFiles = {
+            'individual-service.html': true,
+            'portfolio-single.html': true
+        };
+
+        function getPageName(pathname) {
+            var parts = pathname.split('/');
+            return parts[parts.length - 1] || '';
+        }
+
+        function isSubpageLink(href) {
+            if (!href || href.charAt(0) === '#') {
+                return false;
+            }
+
+            if (/^(mailto:|tel:|javascript:)/i.test(href)) {
+                return false;
+            }
+
+            var url;
+
+            try {
+                url = new URL(href, window.location.href);
+            } catch (error) {
+                return false;
+            }
+
+            if (url.origin !== window.location.origin) {
+                return false;
+            }
+
+            return !!subpageFiles[getPageName(url.pathname)];
+        }
+
+        function revealSubpage() {
+            if (!document.documentElement.classList.contains('cottle-subpage-pending')) {
+                return;
+            }
+
+            document.documentElement.classList.remove('cottle-subpage-pending');
+
+            if (reduceMotion || !document.body.classList.contains('cottle-subpage')) {
+                return;
+            }
+
+            window.requestAnimationFrame(function () {
+                document.body.classList.add('cottle-subpage-reveal');
+                window.setTimeout(function () {
+                    document.body.classList.remove('cottle-subpage-reveal');
+                }, 320);
+            });
+        }
+
+        window.addEventListener('pageshow', function (event) {
+            if (event.persisted) {
+                document.body.classList.remove('cottle-page-exit');
+            }
+            revealSubpage();
+        });
+
+        if (document.body.classList.contains('cottle-subpage')) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', revealSubpage, { once: true });
+            } else {
+                revealSubpage();
+            }
+        }
+
+        if (reduceMotion) {
+            return;
+        }
+
+        $(document).on('click', 'a[href]', function (event) {
+            if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                return;
+            }
+
+            if (this.target && this.target !== '_self') {
+                return;
+            }
+
+            var href = $(this).attr('href');
+            if (!isSubpageLink(href)) {
+                return;
+            }
+
+            var targetUrl = new URL(href, window.location.href);
+            var currentPage = getPageName(window.location.pathname);
+            var targetPage = getPageName(targetUrl.pathname);
+            var sameDocument = targetPage === currentPage &&
+                targetUrl.search === window.location.search;
+
+            if (sameDocument) {
+                return;
+            }
+
+            event.preventDefault();
+            document.body.classList.add('cottle-page-exit');
+
+            try {
+                sessionStorage.setItem('cottleSubpageEnter', '1');
+            } catch (error) {}
+
+            window.setTimeout(function () {
+                window.location.href = targetUrl.href;
+            }, 260);
+        });
+    })();
+
     // multi level dropdown menu
     $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
         if (!$(this).next().hasClass('show')) {
@@ -32,7 +144,9 @@
     new WOW().init();
 
 
+    if ($.fn.owlCarousel) {
     // service-slider — swipe carousel on mobile/tablet, static row on desktop
+    if ($('.service-slider').length) {
     $('.service-slider').owlCarousel({
         margin: 15,
         autoplay: false,
@@ -72,9 +186,11 @@
 
     $('.service-slider').on('initialized.owl.carousel', refreshServiceSlider);
     $(window).on('load resize', refreshServiceSlider);
+    }
 
 
     // portfolio-slider — swipe carousel on mobile/tablet, static row on desktop
+    if ($('.portfolio-slider').length) {
     $('.portfolio-slider').owlCarousel({
         margin: 15,
         autoplay: false,
@@ -114,9 +230,11 @@
 
     $('.portfolio-slider').on('initialized.owl.carousel', refreshPortfolioSlider);
     $(window).on('load resize', refreshPortfolioSlider);
+    }
 
 
     // testimonial-slider
+    if ($('.testimonial-slider').length) {
     $('.testimonial-slider').owlCarousel({
         loop: true,
         margin: 30,
@@ -135,15 +253,21 @@
             }
         }
     });
+    }
+    }
 
 
     // fun fact counter
+    if ($.fn.countTo) {
     $('.counter').countTo();
+    if ($('.counter-box').length) {
     $('.counter-box').appear(function () {
         $('.counter').countTo();
     }, {
         accY: -100
     });
+    }
+    }
 
 
     // progress bar
@@ -192,118 +316,21 @@
         updateSubpageMobileBar();
     }
 
-    (function initSubpageTransitions() {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // navbar — transparent on hero, navy when scrolled
+    function updateNavbarOnScroll() {
+        if (!$('.header').length) {
             return;
         }
 
-        var subpageFiles = {
-            'individual-service.html': true,
-            'portfolio-single.html': true
-        };
-
-        function getPageName(pathname) {
-            var parts = pathname.split('/');
-            return parts[parts.length - 1] || '';
-        }
-
-        function isSubpageLink(href) {
-            if (!href || href.charAt(0) === '#') {
-                return false;
-            }
-
-            if (/^(mailto:|tel:|javascript:)/i.test(href)) {
-                return false;
-            }
-
-            var url;
-
-            try {
-                url = new URL(href, window.location.href);
-            } catch (error) {
-                return false;
-            }
-
-            if (url.origin !== window.location.origin) {
-                return false;
-            }
-
-            return !!subpageFiles[getPageName(url.pathname)];
-        }
-
-        function revealSubpage() {
-            if (!document.documentElement.classList.contains('cottle-subpage-pending')) {
-                return;
-            }
-
-            document.documentElement.classList.remove('cottle-subpage-pending');
-
-            window.requestAnimationFrame(function () {
-                document.body.classList.add('cottle-subpage-reveal');
-                window.setTimeout(function () {
-                    document.body.classList.remove('cottle-subpage-reveal');
-                }, 320);
-            });
-        }
-
-        window.addEventListener('pageshow', function (event) {
-            if (event.persisted) {
-                document.body.classList.remove('cottle-page-exit');
-            }
-        });
-
-        if (document.body.classList.contains('cottle-subpage')) {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', revealSubpage, { once: true });
-            } else {
-                revealSubpage();
-            }
-        }
-
-        $(document).on('click', 'a[href]', function (event) {
-            if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-                return;
-            }
-
-            if (this.target && this.target !== '_self') {
-                return;
-            }
-
-            var href = $(this).attr('href');
-            if (!isSubpageLink(href)) {
-                return;
-            }
-
-            var targetUrl = new URL(href, window.location.href);
-            var currentPage = getPageName(window.location.pathname);
-            var targetPage = getPageName(targetUrl.pathname);
-            var sameDocument = targetPage === currentPage &&
-                targetUrl.search === window.location.search;
-
-            if (sameDocument) {
-                return;
-            }
-
-            event.preventDefault();
-            document.body.classList.add('cottle-page-exit');
-
-            try {
-                sessionStorage.setItem('cottleSubpageEnter', '1');
-            } catch (error) {}
-
-            window.setTimeout(function () {
-                window.location.href = targetUrl.href;
-            }, 260);
-        });
-    })();
-
-    // navbar — transparent on hero, navy when scrolled
-    function updateNavbarOnScroll() {
         $('.header').toggleClass('is-scrolled', $(window).scrollTop() > 80);
     }
 
-    $(window).scroll(updateNavbarOnScroll);
+    $(window).on('scroll', updateNavbarOnScroll);
     updateNavbarOnScroll();
+
+    $(window).on('load pageshow', function () {
+        updateNavbarOnScroll();
+    });
 
 
     // header nav — smooth scroll to page sections
@@ -443,8 +470,8 @@
         setModalScrollbarCompensation(true);
     });
 
-    var QUOTE_EMAIL = 'jonathanmchale8@gmail.com';
-    var FORMSUBMIT_ID = '38c9ce41618861c5bfaaa4e9439c4a73';
+    var QUOTE_EMAIL = 'cottlecnstructionltd@hotmail.com';
+    var FORMSUBMIT_EMAIL = 'cottlecnstructionltd@hotmail.com';
 
     function getQuoteFormFields($form) {
         var fields = {};
@@ -490,7 +517,7 @@
         var fields = getQuoteFormFields($form);
 
         $.ajax({
-            url: 'https://formsubmit.co/ajax/' + FORMSUBMIT_ID,
+            url: 'https://formsubmit.co/ajax/' + encodeURIComponent(FORMSUBMIT_EMAIL),
             type: 'POST',
             data: {
                 name: fields.name,
