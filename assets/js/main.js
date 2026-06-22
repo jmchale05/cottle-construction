@@ -5,6 +5,75 @@
     
     "use strict";
 
+    var isFileProtocol = window.location.protocol === 'file:';
+
+    function rememberFileSiteRoot() {
+        if (!isFileProtocol) {
+            return;
+        }
+
+        try {
+            var href = window.location.href.split('#')[0].split('?')[0];
+            var root = href.replace(/[^/]+$/, '');
+            sessionStorage.setItem('cottleFileRoot', root);
+        } catch (error) {}
+    }
+
+    function recoverFromFileDriveRoot() {
+        if (!isFileProtocol) {
+            return;
+        }
+
+        var path = window.location.pathname;
+        var atDriveRoot = path === '/' || /^\/[A-Za-z]:\/?$/.test(path);
+
+        if (!atDriveRoot) {
+            return;
+        }
+
+        try {
+            var root = sessionStorage.getItem('cottleFileRoot');
+            if (!root) {
+                return;
+            }
+
+            window.location.replace(root + 'index.html' + window.location.hash + window.location.search);
+        } catch (error) {}
+    }
+
+    function getHomeHref(hash) {
+        hash = hash || '';
+
+        if (hash && hash.charAt(0) !== '#') {
+            hash = '#' + hash;
+        }
+
+        if (isFileProtocol) {
+            return 'index.html' + hash;
+        }
+
+        return hash ? '/' + hash : '/';
+    }
+
+    function fixFileProtocolHomeLinks() {
+        if (!isFileProtocol) {
+            return;
+        }
+
+        $('a[href="/"], a[href^="/#"]').each(function () {
+            var href = $(this).attr('href');
+
+            if (href === '/') {
+                $(this).attr('href', getHomeHref());
+            } else if (href && href.indexOf('/#') === 0) {
+                $(this).attr('href', getHomeHref(href.slice(1)));
+            }
+        });
+    }
+
+    rememberFileSiteRoot();
+    recoverFromFileDriveRoot();
+
     (function initSubpageTransitions() {
         var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -371,6 +440,10 @@
     var isNavScrolling = false;
 
     function getCleanHomePath() {
+        if (isFileProtocol) {
+            return null;
+        }
+
         var path = window.location.pathname;
         if (path.endsWith('/index.html')) {
             return (path.slice(0, -10) || '/') + window.location.search;
@@ -383,7 +456,12 @@
             return;
         }
 
-        history.replaceState(null, document.title, getCleanHomePath());
+        var cleanPath = getCleanHomePath();
+        if (!cleanPath) {
+            return;
+        }
+
+        history.replaceState(null, document.title, cleanPath);
     }
 
     function clearHashFromUrl() {
@@ -471,6 +549,9 @@
     // copywrite date
     let date = new Date().getFullYear();
     $("#date").html(date);
+
+    rememberFileSiteRoot();
+    fixFileProtocolHomeLinks();
 
 
     // quote modal
