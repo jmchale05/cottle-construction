@@ -470,8 +470,8 @@
         setModalScrollbarCompensation(true);
     });
 
-    var QUOTE_EMAIL = 'cottlecnstructionltd@hotmail.com';
-    var FORMSUBMIT_EMAIL = 'cottlecnstructionltd@hotmail.com';
+    var QUOTE_EMAIL = 'cottleconstructionltd@hotmail.com';
+    var FORMSUBMIT_EMAIL = 'cottleconstructionltd@hotmail.com';
 
     function getQuoteFormFields($form) {
         var fields = {};

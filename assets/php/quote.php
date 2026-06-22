@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
-$toEmail = 'cottlecnstructionltd@hotmail.com';
-$headerEmail = 'cottlecnstructionltd@hotmail.com';
+$toEmail = 'cottleconstructionltd@hotmail.com';
+$headerEmail = 'cottleconstructionltd@hotmail.com';
 
 $nameErr = $emailErr = $phoneErr = $serviceErr = $messageErr = '';
 $name = $email = $phone = $service = $message = '';
