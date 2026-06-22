@@ -108,8 +108,10 @@
     $('#service-gallery-1').attr({ src: service.image, alt: service.title + ' detail' });
     $('#service-gallery-2').attr({ src: secondaryImage, alt: service.title + ' detail' });
 
-    $('#service-sidebar-links a').removeClass('active');
-    $('#service-sidebar-links a[data-service="' + key + '"]').addClass('active');
+    $('#service-sidebar-links a').removeClass('active').removeAttr('aria-current');
+    $('#service-sidebar-links a[data-service="' + key + '"]')
+        .addClass('active')
+        .attr('aria-current', 'page');
 
     var $benefitsList = $('#service-benefits-list').empty();
     service.benefits.forEach(function (benefit) {

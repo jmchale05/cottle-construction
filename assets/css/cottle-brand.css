@@ -1400,8 +1400,46 @@ body.modal-open {
     background: var(--cottle-construction-orange);
 }
 
-.service-single .service-sidebar .category a.active,
+.service-single .service-sidebar .category a {
+    display: block;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border-bottom: none !important;
+    border-radius: 10px;
+    border-left: 4px solid transparent;
+    font-weight: 500;
+    color: var(--cottle-charcoal);
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.service-single .service-sidebar .category a:last-child {
+    margin-bottom: 0;
+}
+
+.service-single .service-sidebar .category a i {
+    color: var(--cottle-steel-grey);
+    transition: color 0.2s ease;
+}
+
 .service-single .service-sidebar .category a:hover {
+    color: var(--cottle-primary-navy);
+    background: rgba(11, 20, 69, 0.06);
+    border-left-color: rgba(11, 20, 69, 0.2);
+}
+
+.service-single .service-sidebar .category a:hover i {
+    color: var(--cottle-construction-orange);
+}
+
+.service-single .service-sidebar .category a.active {
+    color: var(--cottle-primary-navy);
+    background: rgba(255, 196, 0, 0.22);
+    border-left-color: var(--cottle-warm-gold);
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(11, 20, 69, 0.08);
+}
+
+.service-single .service-sidebar .category a.active i {
     color: var(--cottle-construction-orange);
 }
 
