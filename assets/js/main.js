@@ -1,9 +1,4 @@
-/*=====================================================
-Template Name   : Constur
-Description     : Construction HTML5 Template
-Author          : ThemesLand
-Version         : 1.0
-=======================================================*/
+/* Cottle Construction — site scripts */
 
 
 (function ($) {
@@ -25,17 +20,6 @@ Version         : 1.0
     });
 
 
-    //Header Search
-    if ($('.search-box-outer').length) {
-        $('.search-box-outer').on('click', function () {
-            $('body').addClass('search-active');
-        });
-        $('.close-search').on('click', function () {
-            $('body').removeClass('search-active');
-        });
-    }
-
-
     // data-background    
     $(document).on('ready', function () {
         $("[data-background]").each(function () {
@@ -44,67 +28,8 @@ Version         : 1.0
     });
 
 
-    // sidebar popup 
-    $('.sidebar-btn').on('click', function() {
-        $('.sidebar-popup').addClass('open');
-        $('.sidebar-wrapper').addClass('open');
-    });
-    $('.close-sidebar-popup, .sidebar-popup').on('click', function() {
-        $('.sidebar-popup').removeClass('open');
-        $('.sidebar-wrapper').removeClass('open');
-    });
-
-
     // wow init
     new WOW().init();
-
-
-    // hero slider
-    $('.hero-slider').owlCarousel({
-        loop: true,
-        nav: true,
-        dots: true,
-        margin: 0,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 5000,
-        items: 1,
-        navText: [
-            "<i class='far fa-long-arrow-left'></i>",
-            "<i class='far fa-long-arrow-right'></i>"
-        ],
-
-        onInitialized: function(event) {
-        var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
-        doAnimations($firstAnimatingElements);
-        },
-
-        onChanged: function(event){
-        var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
-        doAnimations($firstAnimatingElements);
-        }
-    });
-
-    //hero slider do animations
-    function doAnimations(elements) {
-		var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		elements.each(function () {
-			var $this = $(this);
-			var $animationDelay = $this.data('delay');
-			var $animationDuration = $this.data('duration');
-			var $animationType = 'animated ' + $this.data('animation');
-			$this.css({
-				'animation-delay': $animationDelay,
-				'-webkit-animation-delay': $animationDelay,
-                'animation-duration': $animationDuration,
-                '-webkit-animation-duration': $animationDuration,
-			});
-			$this.addClass($animationType).one(animationEndEvents, function () {
-				$this.removeClass($animationType);
-			});
-		});
-	}
-
 
 
     // service-slider — swipe carousel on mobile/tablet, static row on desktop
@@ -212,32 +137,6 @@ Version         : 1.0
     });
 
 
-    // partner-slider
-    $('.partner-slider').owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: false,
-        navText: [
-            "<i class='icofont-long-arrow-left'></i>",
-            "<i class='icofont-long-arrow-right'></i>"
-        ],
-        dots: false,
-        autoplay: true,
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 6
-            }
-        }
-    });
-
-
-
     // fun fact counter
     $('.counter').countTo();
     $('.counter-box').appear(function () {
@@ -245,25 +144,6 @@ Version         : 1.0
     }, {
         accY: -100
     });
-
-
-    // magnific popup init
-    $(".popup-gallery").magnificPopup({
-        delegate: '.popup-img',
-        type: 'image',
-        gallery: {
-            enabled: true
-        },
-    });
-
-    $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
-        type: "iframe",
-        mainClass: "mfp-fade",
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
-
 
 
     // progress bar
@@ -279,32 +159,6 @@ Version         : 1.0
                     }, 1000);
                 });
             })
-        }
-    });
-
-
-
-    // case filter
-    $(window).on('load', function () {
-        if ($(".filter-box").children().length > 0) {
-            $(".filter-box").isotope({
-                itemSelector: '.filter-item',
-                masonry: {
-                    columnWidth: 1
-                },
-            });
-
-            $('.filter-btn').on('click', 'li', function () {
-                var filterValue = $(this).attr('data-filter');
-                $(".filter-box").isotope({ filter: filterValue });
-            });
-
-            $(".filter-btn li").each(function () {
-                $(this).on("click", function () {
-                    $(this).siblings("li.active").removeClass("active");
-                    $(this).addClass("active");
-                });
-            });
         }
     });
 
@@ -556,24 +410,9 @@ Version         : 1.0
     $(window).on('scroll', updateActiveNavOnScroll);
 
 
-    // countdown
-    $('[data-countdown]').each(function() {
-        let finalDate = $(this).data('countdown');
-        $(this).countdown(finalDate, function(event) {
-            $(this).html(event.strftime(
-                '<div class="time-wrap">' + '<span class="time"><span>%-D</span><span class="unit">Day%!D</span></span>' + ' <span class="divider">:</span> ' + '<span class="time"><span>%H</span><span class="unit">Hour%!H</span></span>' + ' <span class="divider">:</span> ' + '<span class="time"><span>%M</span><span class="unit">Min%!M</span></span>' + ' <span class="divider">:</span> ' + '<span class="time"><span>%S</span><span class="unit">Sec%!S</span></span>' + '</div>'
-            ));
-        });
-    });
-
-
     // copywrite date
     let date = new Date().getFullYear();
     $("#date").html(date);
-
-
-    // nice select
-    $('.select').niceSelect();
 
 
     // quote modal

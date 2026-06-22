@@ -88,6 +88,12 @@
     }
 
     document.title = service.title + ' | Cottle Construction Ltd';
+
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', service.title + ' across Merseyside — ' + service.intro1);
+    }
+
     $('#service-breadcrumb-active').text(service.title);
     $('#service-detail-title').text(service.title);
     $('#service-detail-image').attr({ src: service.image, alt: service.title + ' by Cottle Construction' });

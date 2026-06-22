@@ -7,7 +7,7 @@
             category: 'Brickwork',
             image: 'assets/img/portfolio/01.jpeg',
             headerImage: 'assets/img/header/brickwork-header.png',
-            gallery: ['assets/img/portfolio/01.jpeg', 'assets/img/portfolio/01.jpeg'],
+            gallery: ['assets/img/portfolio/01.jpeg', 'assets/img/portfolio/brickwork2.png'],
             intro1: 'This residential brickwork project in Merseyside focused on strong, clean masonry that ties in with the existing property. From the first site visit, we planned the work around safe access, weather protection, and keeping disruption to a minimum for the homeowner.',
             intro2: 'Our team carried out the brickwork in stages so each section could be checked, protected, and finished properly before moving on. Mortar mixes, coursing, and detailing were all matched to the surrounding build so the new work looks like it has always been part of the home.',
             midText: 'The client wanted a durable finish that would stand up to everyday use and local weather without needing constant upkeep. We kept the site tidy throughout, communicated progress clearly, and made sure every elevation was left neat, square, and ready for the next stage of the build.',
@@ -26,7 +26,7 @@
             category: 'Architecture',
             image: 'assets/img/portfolio/02.jpeg',
             headerImage: 'assets/img/header/architecture-header.png',
-            gallery: ['assets/img/portfolio/02.jpeg', 'assets/img/portfolio/02.jpeg'],
+            gallery: ['assets/img/portfolio/02.jpeg', 'assets/img/portfolio/roof-lantern2.jpeg'],
             intro1: 'This roof lantern installation was designed to bring more natural light into the room below and give the space a brighter, more open feel. We worked to the client\'s layout and finish requirements, making sure the lantern suited both the roof structure and the look of the property.',
             intro2: 'The installation included careful measuring, structural checks, and weatherproof detailing so the lantern would perform properly in all seasons. Our team fitted the unit with precision and sealed the surrounding area to protect against water ingress.',
             midText: 'Natural light makes a huge difference to how a room feels, but the fitting has to be done right. We focused on clean lines, secure fixings, and a finish that looks sharp inside and out, with minimal disruption while the work was carried out.',
@@ -88,6 +88,12 @@
     }
 
     document.title = project.title + ' | Cottle Construction Ltd';
+
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', project.title + ' — ' + project.intro1);
+    }
+
     $('#portfolio-breadcrumb-active').text(project.title);
     $('#portfolio-detail-title').text(project.title);
     $('#portfolio-category').text(project.category);
@@ -101,6 +107,15 @@
     if (project.gallery && project.gallery.length >= 2) {
         $('#portfolio-gallery-1').attr({ src: project.gallery[0], alt: project.title + ' detail' });
         $('#portfolio-gallery-2').attr({ src: project.gallery[1], alt: project.title + ' detail' });
+
+        var heroImage = project.image.split('/').pop();
+        var galleryImage = project.gallery[0].split('/').pop();
+
+        if (heroImage === galleryImage) {
+            $('#portfolio-gallery-1').closest('.col-md-6').addClass('d-none d-md-block');
+        } else {
+            $('#portfolio-gallery-1').closest('.col-md-6').removeClass('d-none d-md-block');
+        }
     }
 
     var $tipsList = $('#portfolio-tips-list').empty();
