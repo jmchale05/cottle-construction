@@ -5,4 +5,4 @@ Disallow: /assets/img/service/*_files/
 Disallow: /assets/img/service/*.html
 Disallow: /index-2.html
 
-Sitemap: https://www.cottleconstruction.co.uk/sitemap.xml
+Sitemap: https://www.cottle-construction.co.uk/sitemap.xml

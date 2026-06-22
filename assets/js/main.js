@@ -599,7 +599,10 @@ Version         : 1.0
     }
 
     function isGitHubPagesHost() {
-        return window.location.hostname.slice(-10) === 'github.io';
+        var host = window.location.hostname;
+        return host.slice(-10) === 'github.io' ||
+            host === 'cottle-construction.co.uk' ||
+            host === 'www.cottle-construction.co.uk';
     }
 
     $('.quote-request-form').on('submit', function (e) {
