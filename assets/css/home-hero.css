@@ -392,8 +392,32 @@
 }
 
 @media (max-width: 991px) {
+    html,
+    body {
+        background-color: #0B1445;
+    }
+
+    .header,
+    .header .main-navigation,
+    .header .navbar,
+    .header .navbar > .container {
+        background: #0B1445 !important;
+    }
+
+    .header.is-scrolled,
+    .header.is-scrolled .main-navigation,
+    .header.is-scrolled .navbar {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .navbar .offcanvas,
+    .navbar .offcanvas-header,
+    .navbar .offcanvas-body {
+        background: #0B1445 !important;
+    }
+
     .navbar {
-        padding-top: 6px !important;
+        padding-top: max(6px, env(safe-area-inset-top)) !important;
         padding-bottom: 6px !important;
     }
 
@@ -611,17 +635,19 @@
     }
 }
 
-/* Hero header — fully transparent until scroll */
-.header:not(.is-scrolled),
-.header:not(.is-scrolled) .main-navigation,
-.header:not(.is-scrolled) .navbar,
-.header:not(.is-scrolled) .navbar .offcanvas,
-.header:not(.is-scrolled) .navbar .offcanvas-body,
-.header:not(.is-scrolled) .navbar > .container {
-    background: transparent !important;
-    box-shadow: none !important;
-}
+/* Hero header — fully transparent until scroll (desktop only) */
+@media (min-width: 992px) {
+    .header:not(.is-scrolled),
+    .header:not(.is-scrolled) .main-navigation,
+    .header:not(.is-scrolled) .navbar,
+    .header:not(.is-scrolled) .navbar .offcanvas,
+    .header:not(.is-scrolled) .navbar .offcanvas-body,
+    .header:not(.is-scrolled) .navbar > .container {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
 
-.header:not(.is-scrolled) .navbar .nav-right {
-    border-left-color: rgba(255, 255, 255, 0.2);
+    .header:not(.is-scrolled) .navbar .nav-right {
+        border-left-color: rgba(255, 255, 255, 0.2);
+    }
 }

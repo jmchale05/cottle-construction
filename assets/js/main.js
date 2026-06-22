@@ -107,12 +107,10 @@ Version         : 1.0
 
 
 
-    // service-slider — auto carousel on mobile/tablet, static row on desktop
+    // service-slider — swipe carousel on mobile/tablet, static row on desktop
     $('.service-slider').owlCarousel({
         margin: 15,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 5000,
+        autoplay: false,
         smartSpeed: 450,
         navText: [
             "<i class='far fa-arrow-left'></i>",
@@ -151,12 +149,10 @@ Version         : 1.0
     $(window).on('load resize', refreshServiceSlider);
 
 
-    // portfolio-slider — auto carousel on mobile/tablet, static row on desktop
+    // portfolio-slider — swipe carousel on mobile/tablet, static row on desktop
     $('.portfolio-slider').owlCarousel({
         margin: 15,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 5000,
+        autoplay: false,
         smartSpeed: 450,
         navText: [
             "<i class='far fa-arrow-left'></i>",
@@ -240,16 +236,6 @@ Version         : 1.0
         }
     });
 
-
-
-    // preloader — mobile only
-    if (window.matchMedia('(max-width: 991px)').matches) {
-        $(window).on('load', function () {
-            $(".preloader").fadeOut("slow");
-        });
-    } else {
-        $(".preloader").hide();
-    }
 
 
     // fun fact counter
@@ -496,6 +482,7 @@ Version         : 1.0
     });
 
     var QUOTE_EMAIL = 'jonathanmchale8@gmail.com';
+    var FORMSUBMIT_ID = '38c9ce41618861c5bfaaa4e9439c4a73';
 
     function getQuoteFormFields($form) {
         var fields = {};
@@ -541,7 +528,7 @@ Version         : 1.0
         var fields = getQuoteFormFields($form);
 
         $.ajax({
-            url: 'https://formsubmit.co/ajax/' + encodeURIComponent(QUOTE_EMAIL),
+            url: 'https://formsubmit.co/ajax/' + FORMSUBMIT_ID,
             type: 'POST',
             data: {
                 name: fields.name,
@@ -605,6 +592,11 @@ Version         : 1.0
             host === 'www.cottle-construction.co.uk';
     }
 
+    function isFormSubmitAction($form) {
+        var action = $form.attr('action') || '';
+        return action.indexOf('formsubmit.co') !== -1;
+    }
+
     $('.quote-request-form').on('submit', function (e) {
         e.preventDefault();
 
@@ -620,7 +612,7 @@ Version         : 1.0
             return;
         }
 
-        if (isGitHubPagesHost()) {
+        if (isGitHubPagesHost() || isFormSubmitAction($form)) {
             submitQuoteViaFormSubmit($form, $feedback, $submit);
             return;
         }
