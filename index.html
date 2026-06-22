@@ -119,8 +119,37 @@
 
     <script>
         (function () {
+            if (history.replaceState) {
+                var path = window.location.pathname;
+                if (path.endsWith('/index.html')) {
+                    history.replaceState(
+                        null,
+                        '',
+                        (path.slice(0, -10) || '/') + window.location.search + window.location.hash
+                    );
+                }
+            }
+
             var hash = window.location.hash;
             var sectionHashes = ['#about', '#services', '#portfolio', '#contact'];
+
+            function getCleanPath() {
+                var path = window.location.pathname;
+                return path.endsWith('/index.html') ? (path.slice(0, -10) || '/') : path;
+            }
+
+            function cleanHomeUrl() {
+                if (!history.replaceState) {
+                    return;
+                }
+                history.replaceState(null, '', getCleanPath() + window.location.search);
+            }
+
+            window.addEventListener('pageshow', function () {
+                if (window.location.hash || window.location.pathname.endsWith('/index.html')) {
+                    cleanHomeUrl();
+                }
+            });
 
             if (sectionHashes.indexOf(hash) === -1) {
                 return;
@@ -152,6 +181,7 @@
                 }
 
                 document.documentElement.classList.remove('cottle-hash-pending');
+                cleanHomeUrl();
             }
 
             if (document.readyState === 'loading') {
@@ -159,13 +189,6 @@
             } else {
                 scrollToHashAndReveal();
             }
-
-            window.addEventListener('pageshow', function (event) {
-                if (event.persisted && sectionHashes.indexOf(window.location.hash) !== -1) {
-                    document.documentElement.classList.add('cottle-hash-pending');
-                    scrollToHashAndReveal();
-                }
-            });
         })();
     </script>
     <style>
@@ -1044,7 +1067,7 @@
                     <div class="row g-4">
                         <div class="col-lg-4">
                             <div class="footer-widget-box about-us">
-                                <a href="index.html" class="footer-logo">
+                                <a href="/" class="footer-logo">
                                     <img src="assets/img/logo/cottle-logo.png" alt="Cottle Construction Ltd">
                                 </a>
                                 <p class="mb-0">

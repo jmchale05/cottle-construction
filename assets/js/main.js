@@ -330,6 +330,7 @@
 
     $(window).on('load pageshow', function () {
         updateNavbarOnScroll();
+        normalizeHomeUrl();
     });
 
 
@@ -369,6 +370,26 @@
 
     var isNavScrolling = false;
 
+    function getCleanHomePath() {
+        var path = window.location.pathname;
+        if (path.endsWith('/index.html')) {
+            return (path.slice(0, -10) || '/') + window.location.search;
+        }
+        return path + window.location.search;
+    }
+
+    function normalizeHomeUrl() {
+        if (!history.replaceState || !$('#home').length) {
+            return;
+        }
+
+        history.replaceState(null, document.title, getCleanHomePath());
+    }
+
+    function clearHashFromUrl() {
+        normalizeHomeUrl();
+    }
+
     function scrollToSection(hash, duration) {
         var $target = $(hash);
         if (!$target.length) {
@@ -383,6 +404,7 @@
             isNavScrolling = false;
             setActiveNavLink(hash);
             updateNavbarOnScroll();
+            clearHashFromUrl();
             return;
         }
 
@@ -391,6 +413,7 @@
         }, duration || 800, function () {
             isNavScrolling = false;
             setActiveNavLink(hash);
+            clearHashFromUrl();
         });
     }
 
@@ -412,23 +435,31 @@
         $('.mobile-menu-icon').blur();
     });
 
-    $('.navbar-nav .nav-link[href^="#"], .navbar-brand[href^="#"], .offcanvas-brand[href^="#"], .hero-btn a[href^="#"], .about-area a[href^="#"]').on('click', function (e) {
-        var hash = $(this).attr('href');
-        if (!hash || hash === '#') {
-            return;
-        }
+    if ($('#home').length) {
+        $(document).on('click', 'a[href^="#"]', function (e) {
+            var hash = $(this).attr('href');
+            if (!hash || hash === '#') {
+                return;
+            }
 
-        e.preventDefault();
-        scrollToSection(hash);
-        closeMobileNav();
+            if (navSections.indexOf(hash) === -1) {
+                return;
+            }
 
-        if ($(this).hasClass('nav-link') || navSections.indexOf(hash) !== -1) {
+            if (!$(hash).length) {
+                return;
+            }
+
+            e.preventDefault();
+            scrollToSection(hash);
+            closeMobileNav();
             setActiveNavLink(hash);
-        }
-    });
+        });
 
-    if (window.location.hash && navSections.indexOf(window.location.hash) !== -1) {
-        setActiveNavLink(window.location.hash);
+        if (window.location.hash && navSections.indexOf(window.location.hash) !== -1) {
+            setActiveNavLink(window.location.hash);
+            clearHashFromUrl();
+        }
     }
 
     updateNavbarOnScroll();
