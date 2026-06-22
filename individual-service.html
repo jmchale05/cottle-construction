@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Service | Cottle Construction Ltd</title>
+
+    <link rel="icon" type="image/png" href="assets/img/logo/cottle-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cottle-brand.css">
+
+    <script>
+        (function () {
+            var key = new URLSearchParams(window.location.search).get('service') || 'building-structural';
+            var headerSlug = key === 'interiors-installations' ? 'interiors' : key;
+            var headerImage = 'assets/img/header/' + headerSlug + '-header.png';
+            window.__cottleServiceHeader = headerImage;
+
+            var preload = document.createElement('link');
+            preload.rel = 'preload';
+            preload.as = 'image';
+            preload.href = headerImage;
+            document.head.appendChild(preload);
+
+            var style = document.createElement('style');
+            style.textContent = '#service-breadcrumb{background-image:url("' + headerImage + '")}';
+            document.head.appendChild(style);
+        })();
+    </script>
+
+</head>
+
+<body class="cottle-subpage">
+
+    <a href="index.html" class="subpage-mobile-bar" aria-label="Back to home">
+        <span class="subpage-mobile-bar-logo">
+            <img src="assets/img/logo/cottle-logo.png" alt="Cottle Construction Ltd">
+        </span>
+        <span class="subpage-mobile-bar-label"><i class="far fa-home"></i> Home</span>
+    </a>
+
+    <main class="main">
+
+        <div class="site-breadcrumb site-breadcrumb-minimal" id="service-breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li class="active" id="service-breadcrumb-active">Service</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-single py-120">
+            <div class="container">
+                <div class="service-single-wrap">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="service-sidebar">
+                                <div class="widget">
+                                    <h4 class="title">All Services</h4>
+                                    <div class="category" id="service-sidebar-links">
+                                        <a href="individual-service.html?service=building-structural" data-service="building-structural"><i class="far fa-angle-double-right"></i>Building &amp; Structural</a>
+                                        <a href="individual-service.html?service=interiors-installations" data-service="interiors-installations"><i class="far fa-angle-double-right"></i>Interiors &amp; Installations</a>
+                                        <a href="individual-service.html?service=renovations-maintenance" data-service="renovations-maintenance"><i class="far fa-angle-double-right"></i>Renovations &amp; Maintenance</a>
+                                        <a href="individual-service.html?service=landscaping" data-service="landscaping"><i class="far fa-angle-double-right"></i>Landscaping</a>
+                                    </div>
+                                </div>
+                                <div class="widget project">
+                                    <h4>Ready to start your project?</h4>
+                                    <a href="index.html#contact" class="theme-btn2">Contact Now<i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="service-details">
+                                <div class="mb-30 service-detail-hero">
+                                    <img id="service-detail-image" src="assets/img/service/Building.png" alt="Cottle Construction service">
+                                </div>
+                                <div class="content">
+                                    <h3 class="mb-20" id="service-detail-title">Building &amp; Structural</h3>
+                                    <p class="mb-20" id="service-intro-1"></p>
+                                    <p class="mb-20" id="service-intro-2"></p>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-20">
+                                            <img id="service-gallery-1" src="assets/img/service/Building.png" alt="">
+                                        </div>
+                                        <div class="col-md-6 mb-20">
+                                            <img id="service-gallery-2" src="assets/img/service/Building.png" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="mb-20" id="service-mid-text"></p>
+                                    <div class="my-4">
+                                        <div class="mb-3">
+                                            <h3 class="mb-3">Our Work Process</h3>
+                                            <p id="service-process-text"></p>
+                                        </div>
+                                        <ul class="list" id="service-benefits-list"></ul>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h3 class="mb-3">Why Choose This Service?</h3>
+                                        <p id="service-why-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="footer-area">
+        <div class="footer-shape" style="background-image: url(assets/img/shape/03.png);"></div>
+        <div class="footer-widget">
+            <div class="container">
+                <div class="footer-widget-wrap pt-100 pb-80">
+                    <div class="row g-4 justify-content-center justify-content-lg-start">
+                        <div class="col-lg-4">
+                            <div class="footer-widget-box">
+                                <h4 class="footer-widget-title">Get In Touch</h4>
+                                <ul class="footer-contact">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="far fa-phone"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h6>Call Us</h6>
+                                            <a href="tel:01516384838">0151 638 4838</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h6>Mail Us</h6>
+                                            <a href="mailto:jonathanmchale8@gmail.com">jonathanmchale8@gmail.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-12 text-center text-lg-start">
+                        <p class="copyright-text">
+                            &copy; Copyright <span id="date"></span> <a href="#"> Cottle Construction Ltd </a> All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top"><i class="far fa-arrow-up"></i></a>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/individual-service.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / tooling
+.vscode/
+.cursor/
+
+# Saved browser scrape folders (not part of the site)
+assets/img/service/interior-installation_files/
+assets/img/service/landscaping_files/
+assets/img/service/renovation_files/
+assets/img/service/landscaping.html
