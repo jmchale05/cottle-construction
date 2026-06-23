@@ -251,6 +251,7 @@
 
     function refreshServiceSlider() {
         $('.service-slider').trigger('refresh.owl.carousel');
+        updateActiveNavOnScroll();
     }
 
     $('.service-slider').on('initialized.owl.carousel', refreshServiceSlider);
@@ -258,7 +259,7 @@
     }
 
 
-    // portfolio-slider — swipe carousel on mobile/tablet, static row on desktop
+    // portfolio-slider — swipe carousel on mobile/tablet, arrows on desktop
     if ($('.portfolio-slider').length) {
     $('.portfolio-slider').owlCarousel({
         margin: 15,
@@ -281,8 +282,8 @@
             },
             992: {
                 items: 4,
-                loop: false,
-                nav: false,
+                loop: true,
+                nav: true,
                 dots: false,
                 stagePadding: 0,
                 mouseDrag: false,
@@ -295,6 +296,7 @@
 
     function refreshPortfolioSlider() {
         $('.portfolio-slider').trigger('refresh.owl.carousel');
+        updateActiveNavOnScroll();
     }
 
     $('.portfolio-slider').on('initialized.owl.carousel', refreshPortfolioSlider);
@@ -405,8 +407,18 @@
 
     // header nav — smooth scroll to page sections
     var navSections = ['#home', '#about', '#services', '#portfolio', '#contact'];
+    var lockedNavHash = null;
+    var navScrollUnlockTimer = null;
 
     function getHeaderOffset() {
+        var $anchor = $('#home');
+        if ($anchor.length) {
+            var marginTop = parseInt($anchor.css('scroll-margin-top'), 10);
+            if (!isNaN(marginTop) && marginTop > 0) {
+                return marginTop;
+            }
+        }
+
         return ($('.navbar').outerHeight() || 80) + 16;
     }
 
@@ -416,17 +428,30 @@
     }
 
     function getActiveSectionHash() {
-        var scrollPos = $(window).scrollTop() + getHeaderOffset() + 20;
-        var current = navSections[0];
+        var ref = $(window).scrollTop() + getHeaderOffset() + 12;
+        var fallback = navSections[0];
 
-        navSections.forEach(function (hash) {
+        for (var i = 0; i < navSections.length; i++) {
+            var hash = navSections[i];
             var $section = $(hash);
-            if ($section.length && $section.offset().top <= scrollPos) {
-                current = hash;
-            }
-        });
 
-        return current;
+            if (!$section.length) {
+                continue;
+            }
+
+            var top = $section.offset().top;
+            var bottom = top + $section.outerHeight();
+
+            if (ref >= top && ref < bottom) {
+                return hash;
+            }
+
+            if (top <= ref) {
+                fallback = hash;
+            }
+        }
+
+        return fallback;
     }
 
     function updateActiveNavOnScroll() {
@@ -434,7 +459,21 @@
             return;
         }
 
+        if (lockedNavHash) {
+            setActiveNavLink(lockedNavHash);
+            return;
+        }
+
         setActiveNavLink(getActiveSectionHash());
+    }
+
+    function lockNavHash(hash, duration) {
+        lockedNavHash = hash;
+        clearTimeout(navScrollUnlockTimer);
+        navScrollUnlockTimer = setTimeout(function () {
+            lockedNavHash = null;
+            updateActiveNavOnScroll();
+        }, duration || 900);
     }
 
     var isNavScrolling = false;
@@ -480,6 +519,7 @@
         if (duration === 0) {
             window.scrollTo(0, scrollTop);
             isNavScrolling = false;
+            lockNavHash(hash, 300);
             setActiveNavLink(hash);
             updateNavbarOnScroll();
             clearHashFromUrl();
@@ -490,8 +530,10 @@
             scrollTop: scrollTop
         }, duration || 800, function () {
             isNavScrolling = false;
+            lockNavHash(hash);
             setActiveNavLink(hash);
             clearHashFromUrl();
+            window.requestAnimationFrame(updateActiveNavOnScroll);
         });
     }
 
@@ -529,6 +571,7 @@
             }
 
             e.preventDefault();
+            lockNavHash(hash);
             scrollToSection(hash);
             closeMobileNav();
             setActiveNavLink(hash);

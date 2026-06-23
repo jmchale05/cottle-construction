@@ -793,11 +793,41 @@ html {
 
 @media (min-width: 992px) {
     .portfolio-area {
-        overflow-x: clip;
+        overflow: visible;
+    }
+
+    .portfolio-area .row.pb-20 {
+        position: relative;
+        padding-left: 36px;
+        padding-right: 36px;
     }
 
     .portfolio-slider.owl-carousel {
         touch-action: pan-y;
+        overflow: visible;
+    }
+
+    .portfolio-slider .owl-stage-outer {
+        overflow: hidden;
+    }
+
+    .portfolio-slider .owl-nav button i {
+        background: var(--cottle-warm-gold);
+        color: var(--cottle-primary-navy);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-slider .owl-nav button:hover i {
+        background: var(--cottle-white);
+        color: var(--cottle-primary-navy);
+    }
+
+    .portfolio-slider:hover .owl-nav .owl-prev {
+        left: -4px;
+    }
+
+    .portfolio-slider:hover .owl-nav .owl-next {
+        right: -4px;
     }
 }
 

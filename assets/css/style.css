@@ -3019,7 +3019,7 @@ label {
   opacity: 1;
 }
 
-@media all and (max-width: 1199px) {
+@media all and (max-width: 991px) {
   .portfolio-slider .owl-nav {
     display: none;
   }

@@ -77,6 +77,63 @@
                 'Fill and touch up carefully for a seamless finish.'
             ],
             overview: 'The challenge was turning a plain wall into a feature without making the room feel busy. We solved this with careful layout, precise fitting, and a finish that suits the rest of the interior. The client was left with a modern panel wall that looks great and feels well built.'
+        },
+        'interior-wall-tiling': {
+            title: 'Wall Tiling',
+            category: 'Interior',
+            image: 'assets/img/portfolio/tiling.jpeg',
+            headerImage: 'assets/img/header/tiling-header.png',
+            gallery: ['assets/img/portfolio/tiling.jpeg', 'assets/img/portfolio/tiling2.png'],
+            intro1: 'This interior wall tiling project focused on a clean, durable finish that suits the room and stands up to everyday use. The layout was planned carefully so lines, joints, and edges all looked balanced and intentional.',
+            intro2: 'We prepared the wall surfaces, set out the tile pattern, and fitted each section with precision. The result is a neat, professional tiled wall that lifts the space and feels built to last.',
+            midText: 'Wall tiling works best when the preparation and setting out are right from the start. We focused on level surfaces, accurate cuts, and tidy finishing so the completed wall looks sharp and performs well over time.',
+            tipsText: 'Good wall tiling starts with a sound, flat surface and a clear layout. Taking time on preparation keeps the finished wall looking neat and helps the tiles stay secure.',
+            tips: [
+                'Check walls are level, dry, and suitable for tiling.',
+                'Plan the tile layout before fixing begins.',
+                'Use the right adhesive and grout for the room conditions.',
+                'Keep grout lines consistent for a clean finish.',
+                'Protect surrounding surfaces during installation.'
+            ],
+            overview: 'The challenge was tiling an interior wall with a finish that looked sharp and suited the rest of the room. We solved this with careful surface preparation, accurate setting out, and neat detailing on every edge. The client was left with a smart tiled wall they were happy with.'
+        },
+        plastering: {
+            title: 'Ready for Decoration',
+            category: 'Plastering',
+            image: 'assets/img/portfolio/Plastering.jpeg',
+            headerImage: 'assets/img/header/plastering-header.png',
+            gallery: ['assets/img/portfolio/Plastering.jpeg', 'assets/img/portfolio/plastering2.jpeg'],
+            intro1: 'This plastering and door project covered smooth wall and ceiling finishes and a fire door fitted ready for decoration. We prepared each surface carefully so the plasterwork went on cleanly and the new door sat neatly in its frame.',
+            intro2: 'Our team worked through the plastering in stages — protecting the rest of the property, keeping dust under control, and finishing joints, angles, and reveals neatly around the new door.',
+            midText: 'Good plastering is about flat surfaces, clean corners, and details that look right once painted — especially around door frames and new openings. We left this room smooth, secure, and ready for the next stage of decoration.',
+            tipsText: 'A finish ready for decoration starts with sound preparation — particularly where walls have been altered or a new door has been fitted. Getting backgrounds flat and dry before skimming saves time later and gives a much better result.',
+            tips: [
+                'Check walls and ceilings are dry and stable before plastering.',
+                'Plan door openings and frame sizes early in the project.',
+                'Protect floors, woodwork, and fittings from splashes and dust.',
+                'Finish corners and reveals neatly around the door frame.',
+                'Allow proper drying time before decoration begins.'
+            ],
+            overview: 'The challenge was combining a new door installation with plasterwork that would look flawless once decorated. We solved this with careful preparation and consistent finishing on every wall, ceiling, and frame detail. The client was left with a room ready to decorate.'
+        },
+        'wall-removal': {
+            title: 'New Door Opening',
+            category: 'Wall Removal',
+            image: 'assets/img/portfolio/wall-removal.jpeg',
+            headerImage: 'assets/img/header/WALL-REMOVAL-HEADER.png',
+            gallery: ['assets/img/portfolio/wall-removal.jpeg', 'assets/img/portfolio/wall-removal2.jpeg'],
+            intro1: 'This wall removal project created a new opening between rooms, with the structural work planned and carried out safely from start to finish. We assessed the wall, installed temporary support, and removed the masonry in a controlled way to form the new doorway.',
+            intro2: 'Our team worked in stages so the building stayed supported throughout, with dust sheets and protection in place for the rest of the property. Once the opening was formed, the area was left neat, secure, and ready for the next stage of the build.',
+            midText: 'Removing a wall for a new door or passage needs proper planning — not just knocking through. We focused on safe support, clean removal, and a tidy finish so the opening was ready for framing, plastering, and the door to be fitted.',
+            tipsText: 'Wall removal should always start with a clear understanding of what is structural and how the load will be supported. Getting props, lintels, and protection right keeps the job safe and avoids costly problems later.',
+            tips: [
+                'Confirm whether the wall is load-bearing before work begins.',
+                'Install temporary support and props where required.',
+                'Protect adjoining rooms from dust and debris.',
+                'Remove masonry in a controlled sequence.',
+                'Leave the opening clean and ready for the next trade.'
+            ],
+            overview: 'The challenge was forming a new doorway safely in a lived-in property without damaging surrounding finishes or compromising the structure. We solved this with careful support, staged removal, and clear communication throughout. The client was left with a secure opening ready for the follow-on work.'
         }
     };
 
