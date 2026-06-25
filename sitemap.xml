@@ -1,13 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.cottle-construction.co.uk/</loc>
-        <lastmod>2026-06-15</lastmod>
+        <loc>https://cottle-construction.co.uk/</loc>
+        <lastmod>2026-06-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.cottle-construction.co.uk/privacy-policy.html</loc>
+        <loc>https://cottle-construction.co.uk/individual-service.html?service=building-structural</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/individual-service.html?service=interiors-installations</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/individual-service.html?service=renovations-maintenance</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/individual-service.html?service=landscaping</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=brickwork</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=roof-lantern</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=bespoke-joinery</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=panel-wall</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=interior-wall-tiling</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=plastering</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/portfolio-single.html?project=wall-removal</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cottle-construction.co.uk/privacy-policy.html</loc>
         <lastmod>2026-06-22</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>

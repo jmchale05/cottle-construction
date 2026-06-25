@@ -4,4 +4,4 @@ Allow: /
 Disallow: /assets/img/service/*_files/
 Disallow: /assets/img/service/*.html
 
-Sitemap: https://www.cottle-construction.co.uk/sitemap.xml
+Sitemap: https://cottle-construction.co.uk/sitemap.xml
