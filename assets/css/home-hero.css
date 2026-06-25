@@ -606,6 +606,76 @@ html.cottle-hash-pending {
     }
 }
 
+/* Tablet horizontal — smaller logo and tighter header so nav fits */
+@media (min-width: 992px) and (max-width: 1366px) and (orientation: landscape) {
+    .header:not(.is-scrolled) .main-navigation .navbar > .container {
+        min-height: 96px;
+    }
+
+    .navbar-brand.header-logo-circle {
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+    }
+
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle {
+        top: calc(50% + 24px);
+        width: 148px;
+        height: 148px;
+        padding: 10px;
+    }
+
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle img {
+        max-height: 118px !important;
+    }
+
+    .header.is-scrolled .navbar-brand.header-logo-circle {
+        top: calc(50% + 10px);
+        width: 96px;
+        height: 96px;
+        padding: 8px;
+    }
+
+    .header.is-scrolled .navbar-brand.header-logo-circle img {
+        max-height: 76px !important;
+    }
+
+    .navbar .offcanvas-body {
+        padding: 0 148px 0 168px;
+    }
+
+    .header:not(.is-scrolled) .navbar .offcanvas-body {
+        padding: 0 148px 0 196px;
+    }
+
+    .navbar .nav-item .nav-link {
+        padding: 8px 12px !important;
+        font-size: 13px;
+    }
+
+    .header:not(.is-scrolled) .navbar .nav-item .nav-link {
+        font-size: 14px !important;
+        padding: 9px 14px !important;
+    }
+
+    .header:not(.is-scrolled) .navbar .nav-btn .theme-btn {
+        font-size: 14px !important;
+        padding: 9px 14px !important;
+    }
+
+    .navbar .navbar-nav {
+        gap: 2px;
+    }
+
+    .header:not(.is-scrolled) .navbar .navbar-nav {
+        gap: 4px;
+    }
+
+    .hero-single .hero-content .hero-title {
+        font-size: 36px;
+    }
+}
+
 @media (max-width: 767px) {
     .navbar {
         padding-top: 4px !important;
@@ -649,6 +719,91 @@ html.cottle-hash-pending {
 
     .hero-btn {
         gap: 1rem;
+    }
+}
+
+/* Landscape phones — compact header logo and hero */
+@media (max-width: 991px) and (orientation: landscape) {
+    .navbar {
+        padding-top: max(2px, env(safe-area-inset-top)) !important;
+        padding-bottom: 2px !important;
+    }
+
+    .navbar-brand.header-logo-circle {
+        width: 56px;
+        height: 56px;
+        padding: 5px;
+    }
+
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle {
+        width: 80px;
+        transform: translateY(2px);
+    }
+
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle img {
+        max-height: 72px !important;
+    }
+
+    .header.is-scrolled .navbar-brand.header-logo-circle {
+        width: 52px;
+        height: 52px;
+        padding: 4px;
+    }
+
+    .header.is-scrolled .navbar-brand.header-logo-circle img {
+        max-height: 42px !important;
+    }
+
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle:hover {
+        transform: translateY(2px);
+    }
+
+    .offcanvas-brand.header-logo-circle {
+        width: 52px;
+        height: 52px;
+        padding: 4px;
+    }
+
+    .offcanvas-brand.header-logo-circle img {
+        max-height: 42px !important;
+    }
+
+    .mobile-menu-icon {
+        font-size: 22px;
+    }
+
+    .hero-single {
+        padding-top: 52px;
+        padding-bottom: 12px;
+        align-items: center;
+    }
+
+    .hero-single .hero-content .hero-sub-title {
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 4px 12px;
+    }
+
+    .hero-single .hero-content .hero-title {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    .hero-content p {
+        font-size: 15px !important;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .hero-btn {
+        margin-top: 16px;
+        gap: 0.75rem;
+    }
+
+    .hero-btn .theme-btn,
+    .hero-btn .theme-btn2 {
+        padding: 10px 18px;
+        font-size: 14px;
     }
 }
 

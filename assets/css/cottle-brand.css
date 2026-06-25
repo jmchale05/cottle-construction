@@ -640,6 +640,18 @@ html {
     }
 }
 
+@media (min-width: 992px) and (max-width: 1366px) and (orientation: landscape) {
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle img,
+    .header:not(.is-scrolled) .header-logo-circle img {
+        max-height: 118px !important;
+    }
+
+    .header.is-scrolled .navbar-brand.header-logo-circle img,
+    .header.is-scrolled .header-logo-circle img {
+        max-height: 76px !important;
+    }
+}
+
 @media (max-width: 991px) {
     .header:not(.is-scrolled) .navbar-brand.header-logo-circle img {
         max-height: 108px !important;
@@ -671,6 +683,41 @@ html {
 
     .footer-logo img {
         max-height: 130px !important;
+    }
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+    .header:not(.is-scrolled) .navbar-brand.header-logo-circle img {
+        max-height: 72px !important;
+    }
+
+    .header.is-scrolled .navbar-brand.header-logo-circle img {
+        max-height: 42px !important;
+    }
+
+    .offcanvas-brand img,
+    .sidebar-popup-logo img {
+        max-height: 80px !important;
+    }
+
+    #home,
+    #about,
+    #services,
+    #portfolio,
+    #contact {
+        scroll-margin-top: 72px;
+    }
+
+    .subpage-mobile-bar {
+        padding: 6px 12px;
+    }
+
+    .subpage-mobile-bar-logo img {
+        height: 28px;
+    }
+
+    .subpage-mobile-bar-label {
+        font-size: 13px;
     }
 }
 
