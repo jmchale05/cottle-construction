@@ -78,8 +78,23 @@
         var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         var subpageFiles = {
-            'individual-service.html': true,
-            'portfolio-single.html': true
+            'building-structural.html': true,
+            'interiors-installations.html': true,
+            'renovations-maintenance.html': true,
+            'landscaping.html': true,
+            'project-brickwork.html': true,
+            'project-roof-lantern.html': true,
+            'project-bespoke-joinery.html': true,
+            'project-panel-wall.html': true,
+            'project-interior-wall-tiling.html': true,
+            'project-plastering.html': true,
+            'project-wall-removal.html': true,
+            'builders-liverpool.html': true,
+            'builders-sefton.html': true,
+            'builders-wirral.html': true,
+            'builders-st-helens.html': true,
+            'builders-knowsley.html': true,
+            'builders-merseyside.html': true
         };
 
         function getPageName(pathname) {

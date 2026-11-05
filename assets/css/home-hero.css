@@ -317,7 +317,7 @@ html.cottle-hash-pending {
     display: flex;
     position: relative;
     background-color: #0B1445;
-    background-image: url("../img/hero/hero-2.png") !important;
+    background-image: url("../img/hero/hero-2.webp") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -535,7 +535,7 @@ html.cottle-hash-pending {
         box-sizing: border-box;
         align-items: center;
         justify-content: center;
-        background-image: url("../img/hero/mobile-hero.png") !important;
+        background-image: url("../img/hero/mobile-hero.webp") !important;
     }
 
     .hero-single .container {

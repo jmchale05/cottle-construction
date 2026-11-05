@@ -1,0 +1,244 @@
+{
+  "liverpool": {
+    "file": "builders-liverpool.html",
+    "name": "Liverpool",
+    "heading": "Builders in Liverpool",
+    "seoTitle": "Builders in Liverpool | Extensions & Renovations | Cottle Construction",
+    "metaDescription": "Local builders covering Liverpool for extensions, renovations, kitchens, bathrooms and landscaping. Honest advice and free quotes. Call 07776 879715.",
+    "headerImage": "assets/img/areas/liverpool-skyline.webp",
+    "image": "assets/img/areas/liverpool-skyline.webp",
+    "places": [
+      "Liverpool city centre",
+      "Walton",
+      "Anfield",
+      "Everton",
+      "West Derby",
+      "Wavertree",
+      "Allerton",
+      "Woolton",
+      "Childwall",
+      "Aigburth",
+      "Garston",
+      "Toxteth",
+      "Mossley Hill",
+      "Old Swan",
+      "Norris Green",
+      "Fazakerley"
+    ],
+    "intro1": "Cottle Construction is a local building firm based in north Liverpool, carrying out extensions, renovations, interior work and landscaping for homeowners right across the city. Because we are close by, we can get out for site visits quickly and keep a close eye on every job we run.",
+    "intro2": "We handle projects of all sizes, from a single room refit to a full renovation. Every job starts with a free visit, an honest conversation about what you want to achieve, and a clear written quote with no hidden extras.",
+    "localTitle": "Building work for Liverpool homes",
+    "local": [
+      "A lot of Liverpool's housing is Victorian and Edwardian terraces. These homes have plenty of character but often need careful work: rear and side-return extensions, knocking through to open up downstairs rooms, and upgrading tired kitchens and bathrooms without losing the original feel.",
+      "Older properties can also hide surprises once work starts, from uneven walls to old lintels. We plan for this from the first visit, check the structure properly, and explain any issues clearly before deciding how to proceed."
+    ],
+    "why": "Choosing a local builder means quicker responses, easier site visits and someone who understands the kind of homes found across the city. We keep sites tidy, communicate clearly and finish every stage properly before moving on.",
+    "photo": {
+      "subject": "Liverpool waterfront from the Mersey Ferry",
+      "artist": "Rept0n1x",
+      "source": "https://commons.wikimedia.org/wiki/File:Liverpool_skyline_from_the_Mersey_Ferry_-_2012-05-27.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  },
+  "sefton": {
+    "file": "builders-sefton.html",
+    "name": "Crosby, Formby & Sefton",
+    "heading": "Builders in Crosby, Formby & Sefton",
+    "seoTitle": "Builders in Crosby, Formby & Southport | Cottle Construction",
+    "metaDescription": "Local builders based in north Liverpool, covering Crosby, Formby, Southport, Bootle, Maghull and across Sefton. Free quotes. Call 07776 879715.",
+    "headerImage": "assets/img/areas/sefton.webp",
+    "image": "assets/img/areas/sefton.webp",
+    "places": [
+      "Crosby",
+      "Waterloo",
+      "Blundellsands",
+      "Thornton",
+      "Litherland",
+      "Bootle",
+      "Seaforth",
+      "Formby",
+      "Hightown",
+      "Ince Blundell",
+      "Maghull",
+      "Lydiate",
+      "Netherton",
+      "Southport",
+      "Ainsdale",
+      "Birkdale"
+    ],
+    "intro1": "We are based on the Crosby side of north Liverpool, so Sefton is right on our doorstep. From Bootle and Litherland up to Formby and Southport, we carry out extensions, renovations, interior work and landscaping for local homeowners.",
+    "intro2": "Being local means we can visit quickly, keep in close contact during the job and be on hand if anything needs looking at after we finish. Every project starts with a free visit and a clear, no-obligation quote.",
+    "localTitle": "Building work for Sefton homes",
+    "local": [
+      "Sefton has a real mix of properties, from Victorian terraces in Waterloo and Bootle to larger semi-detached and detached homes in Crosby, Formby and Southport. That means a wide range of work, including rear extensions, roof lanterns to bring in more light, kitchen refits and full renovations.",
+      "Homes near the coast are more exposed to wind and salty air, which affects choices for roofing, fencing, decking and outdoor finishes. We pick materials and fixings that are suited to the conditions so the work lasts."
+    ],
+    "why": "As a local firm, our reputation in Sefton matters to us. We give straight answers, turn up when we say we will, and leave every job clean, safe and finished to a standard we are happy to put our name to.",
+    "photo": {
+      "subject": "Another Place, Crosby Beach",
+      "artist": "Neil Theasby",
+      "source": "https://commons.wikimedia.org/wiki/File:On_Crosby_Beach_-_%22Another_Place%22_-_geograph.org.uk_-_4073389.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+    }
+  },
+  "wirral": {
+    "file": "builders-wirral.html",
+    "name": "the Wirral",
+    "heading": "Builders on the Wirral",
+    "seoTitle": "Builders on the Wirral | Extensions & Renovations | Cottle Construction",
+    "metaDescription": "Builders covering the Wirral, including Birkenhead, Wallasey, Bebington and West Kirby. Extensions, renovations, interiors and landscaping. Free quotes.",
+    "headerImage": "assets/img/areas/wirral.webp",
+    "image": "assets/img/areas/wirral.webp",
+    "places": [
+      "Birkenhead",
+      "Wallasey",
+      "New Brighton",
+      "Bebington",
+      "Bromborough",
+      "Eastham",
+      "Prenton",
+      "Oxton",
+      "Moreton",
+      "Upton",
+      "Greasby",
+      "West Kirby",
+      "Hoylake",
+      "Heswall",
+      "Irby",
+      "Pensby"
+    ],
+    "intro1": "Cottle Construction works across the Wirral, from Birkenhead and Wallasey to Bebington, Heswall and West Kirby. We take on extensions, renovations, interior projects and landscaping for homeowners who want reliable work and clear communication.",
+    "intro2": "Every job starts with a free visit so we can see the property, talk through what you want and give you a straightforward written quote. Once work starts, we keep you updated and keep the site tidy throughout.",
+    "localTitle": "Building work for Wirral homes",
+    "local": [
+      "The Wirral has everything from Victorian villas in Oxton and Birkenhead to inter-war semis and modern estates. We regularly see homeowners wanting more space through extensions and conversions, or bringing older properties up to date with new kitchens, bathrooms and full renovations.",
+      "Gardens are a big part of many Wirral homes, and we build patios, decking and fencing with proper groundwork and drainage. Along the coast, we choose materials that cope with the weather so outdoor work stays looking good."
+    ],
+    "why": "We bring the same standards to every job: honest advice, safe working and a proper finish. Wirral homeowners get a builder who communicates clearly and treats their home with respect.",
+    "photo": {
+      "subject": "Perch Rock Lighthouse, New Brighton",
+      "artist": "Mike Peel",
+      "source": "https://commons.wikimedia.org/wiki/File:Perch_Rock_Lighthouse_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  },
+  "st-helens": {
+    "file": "builders-st-helens.html",
+    "name": "St Helens",
+    "heading": "Builders in St Helens",
+    "seoTitle": "Builders in St Helens | Extensions & Renovations | Cottle Construction",
+    "metaDescription": "Builders covering St Helens, Newton-le-Willows, Rainford and Haydock. Extensions, renovations, kitchens, bathrooms and landscaping. Free quotes.",
+    "headerImage": "assets/img/areas/st-helens.webp",
+    "image": "assets/img/areas/st-helens.webp",
+    "places": [
+      "St Helens town centre",
+      "Eccleston",
+      "Rainford",
+      "Rainhill",
+      "Haydock",
+      "Newton-le-Willows",
+      "Billinge",
+      "Thatto Heath",
+      "Sutton",
+      "Parr",
+      "Moss Bank",
+      "Windle"
+    ],
+    "intro1": "We carry out building work for homeowners across St Helens, including Eccleston, Rainford, Rainhill, Haydock and Newton-le-Willows. Our work covers extensions, structural alterations, renovations, interiors and landscaping.",
+    "intro2": "Each project begins with a free visit and a clear, itemised quote. We plan the work around your household, keep you informed as it progresses and make sure each stage is finished properly before moving to the next.",
+    "localTitle": "Building work for St Helens homes",
+    "local": [
+      "St Helens has a broad mix of homes, from older terraces near the town centre to post-war semis and newer estates on the edges of town. Many homeowners are looking to add space with an extension, open up downstairs rooms or modernise a dated kitchen or bathroom.",
+      "With newer homes, the work is often about making the most of the space, such as garden rooms, patios and interior upgrades. With older properties, we take extra care checking structure and existing finishes before any work begins."
+    ],
+    "why": "St Helens homeowners get a builder who is honest about costs and timescales, works safely, and keeps disruption to a minimum. We would rather give you good advice than oversell.",
+    "photo": {
+      "subject": "St Helens Town Hall",
+      "artist": "Rept0n1x",
+      "source": "https://commons.wikimedia.org/wiki/File:St_Helens_Town_Hall_(1).JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  },
+  "knowsley": {
+    "file": "builders-knowsley.html",
+    "name": "Knowsley",
+    "heading": "Builders in Knowsley",
+    "seoTitle": "Builders in Knowsley, Huyton & Prescot | Cottle Construction",
+    "metaDescription": "Builders covering Knowsley, including Huyton, Prescot, Kirkby, Whiston and Halewood. Extensions, renovations, interiors and landscaping. Free quotes.",
+    "headerImage": "assets/img/areas/knowsley.webp",
+    "image": "assets/img/areas/knowsley.webp",
+    "places": [
+      "Huyton",
+      "Prescot",
+      "Kirkby",
+      "Whiston",
+      "Halewood",
+      "Knowsley Village",
+      "Roby",
+      "Page Moss",
+      "Stockbridge Village",
+      "Cronton"
+    ],
+    "intro1": "Cottle Construction covers Knowsley, including Huyton, Prescot, Kirkby, Whiston and Halewood. We carry out extensions, renovations, interior work, plastering and landscaping for local homeowners and landlords.",
+    "intro2": "We start every job with a free visit and a clear quote, then keep you informed throughout. Our team protects your home while we work and leaves every area clean and finished.",
+    "localTitle": "Building work for Knowsley homes",
+    "local": [
+      "Much of Knowsley's housing is post-war semis and terraces, with newer developments in places like Halewood and Prescot. These homes are often ideal for rear extensions, knock-throughs and loft or garage conversions to create extra living space.",
+      "We also take on refurbishment and maintenance work for landlords and homeowners getting a property ready to rent or sell, including plastering, new doors, kitchens, bathrooms and general upgrades."
+    ],
+    "why": "Knowsley homeowners and landlords get straightforward pricing, reliable timekeeping and a tidy, professional finish. We tell you what needs doing, what can wait, and how to get the best result for your budget.",
+    "photo": {
+      "subject": "Knowsley Hall",
+      "artist": "SLR Jester",
+      "source": "https://commons.wikimedia.org/wiki/File:Wide_image_of_Knowsley_Hall.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+  },
+  "merseyside": {
+    "file": "builders-merseyside.html",
+    "name": "Merseyside & surrounding areas",
+    "menuLabel": "And Surrounding Areas",
+    "heading": "Builders across Merseyside & Surrounding Areas",
+    "seoTitle": "Builders across Merseyside & Surrounding Areas | Cottle Construction",
+    "metaDescription": "Builders covering all of Merseyside, including Liverpool, Sefton, the Wirral, St Helens and Knowsley, plus nearby areas. Free quotes. Call 07776 879715.",
+    "headerImage": "assets/img/areas/merseyside.webp",
+    "image": "assets/img/areas/merseyside.webp",
+    "places": [
+      "Liverpool",
+      "Crosby",
+      "Formby",
+      "Southport",
+      "Bootle",
+      "Maghull",
+      "Birkenhead",
+      "Wallasey",
+      "Bebington",
+      "Heswall",
+      "St Helens",
+      "Prescot",
+      "Huyton",
+      "Kirkby",
+      "Halewood"
+    ],
+    "intro1": "Cottle Construction is based in north Liverpool and works right across Merseyside, from Southport down to the Wirral and out to St Helens. If you are just outside Merseyside, it is still worth asking, as we can often help.",
+    "intro2": "Whatever the location, every job gets the same approach: a free site visit, a clear written quote, safe and tidy working, and regular updates until the work is finished.",
+    "localTitle": "Just outside Merseyside?",
+    "local": [
+      "Our main area is Liverpool, Sefton, the Wirral, St Helens and Knowsley. If your home is close to the edge of Merseyside, give us a call and tell us where you are and what you need. Larger projects like extensions and full renovations are often worth a slightly longer trip.",
+      "We will always be honest about whether we can take your job on. If it is too far for us to do it properly, we will tell you straight away rather than keep you waiting."
+    ],
+    "why": "Wherever you are, you get a builder who gives straight answers, turns up when promised and finishes every stage properly. Not sure if we cover your area? Just ask.",
+    "photo": {
+      "subject": "Mersey Ferry Snowdrop on the River Mersey",
+      "artist": "Mike McBey",
+      "source": "https://commons.wikimedia.org/wiki/File:Ferry_across_the_Mersey_(47977063322).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+  }
+}
