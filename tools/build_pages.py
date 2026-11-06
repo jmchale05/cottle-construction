@@ -82,8 +82,8 @@ def head(title, description, url, header_image, structured_data):
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261104b">
-    <link rel="stylesheet" href="assets/css/cottle-brand.css?v=20261104b">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261106a">
+    <link rel="stylesheet" href="assets/css/cottle-brand.css?v=20261106a">
 
     <script type="application/ld+json">
 {json_ld(structured_data)}
@@ -212,7 +212,7 @@ FOOTER = f'''
     <script src="assets/js/jquery.appear.min.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js?v=20261104b"></script>
+    <script src="assets/js/main.js?v=20261106a"></script>
 
 </body>
 
