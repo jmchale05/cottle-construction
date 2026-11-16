@@ -1909,3 +1909,13 @@ body.modal-open {
         transform: none;
     }
 }
+
+/* Keep the portfolio arrow a full circle when the project title wraps onto two lines */
+.portfolio-content .portfolio-arrow {
+    flex-shrink: 0;
+}
+
+.portfolio-content .portfolio-info {
+    min-width: 0;
+    padding-right: 10px;
+}

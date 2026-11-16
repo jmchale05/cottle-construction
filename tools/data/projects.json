@@ -173,5 +173,140 @@
     "file": "project-wall-removal.html",
     "seoTitle": "New Door Opening (Wall Removal) in Merseyside | Cottle Construction",
     "metaDescription": "Wall removal in Merseyside to form a new door opening, with temporary support, controlled removal and a clean, secure finish."
+  },
+  "flat-roof": {
+    "title": "Flat Roof Refurbishment",
+    "category": "Roofing",
+    "image": "assets/img/portfolio/flat-roof-after.webp",
+    "headerImage": "assets/img/header/flat-roof-header.webp",
+    "gallery": [
+      "assets/img/portfolio/flat-roof-after.webp",
+      "assets/img/portfolio/flat-roof-before.webp"
+    ],
+    "intro1": "This flat roof had reached the end of its life, with a worn, patchy surface around the existing roof lantern. We re-covered the roof with new felt, finishing it neatly around the lantern, upstands and edges.",
+    "intro2": "The work was planned around the lantern so it stayed sealed and watertight throughout. Each section of felt was laid and lapped in order, with the joints and edges finished so water runs off the roof properly.",
+    "midText": "The before and after photos show the difference a new flat roof makes. The finished surface is clean, even and sealed, protecting the room below and giving the roof many more years of life.",
+    "tipsText": "A flat roof often needs attention long before it starts to leak. Catching wear early and re-covering the roof properly is usually far cheaper than repairing water damage inside.",
+    "tips": [
+      "Check flat roofs for cracking, blistering and standing water.",
+      "Pay close attention to edges, upstands and around rooflights.",
+      "Clear debris and moss so water can drain freely.",
+      "Re-cover the whole roof once patch repairs stop working.",
+      "Make sure rooflights and lanterns are properly sealed in."
+    ],
+    "overview": "The challenge was renewing the roof covering while keeping the existing roof lantern sealed and protected. We worked carefully around it and finished every edge and joint neatly, leaving a clean, watertight flat roof.",
+    "file": "project-flat-roof.html",
+    "seoTitle": "Flat Roof Refurbishment (Roofing) in Merseyside | Cottle Construction",
+    "metaDescription": "Flat roof refurbishment in Merseyside: an old, worn roof re-covered with new felt and finished neatly around the existing roof lantern. Before and after photos."
+  },
+  "french-doors": {
+    "title": "French Doors & Windows",
+    "category": "Doors",
+    "image": "assets/img/portfolio/refurb-doors-paving.webp",
+    "headerImage": "assets/img/header/refurbishment-header.webp",
+    "gallery": [
+      "assets/img/portfolio/refurb-doors-paving.webp",
+      "assets/img/portfolio/refurb-french-doors.webp"
+    ],
+    "extraGallery": [
+      "assets/img/portfolio/refurb-new-openings.webp"
+    ],
+    "intro1": "On this job the old windows came out and the brickwork was opened up so new French doors and windows could be fitted, giving the rooms behind direct access out to the garden.",
+    "intro2": "The new frames are finished in dark grey to suit the brickwork, with French doors in the centre and matching windows either side.",
+    "midText": "Opening up an existing wall needs careful planning and support, so the structure stays sound while the brickwork is altered. Once the openings were formed, the doors and windows were fitted and sealed in, ready for the outside to be finished.",
+    "tipsText": "Swapping windows for French doors can transform how a room is used, but the opening has to be planned properly. Getting the support, sizes and finishes right at the start avoids problems later.",
+    "tips": [
+      "Plan any new or enlarged openings and their support before cutting into brickwork.",
+      "Measure openings accurately and order doors and windows in good time.",
+      "Choose frame colours that suit the brickwork and the rest of the building.",
+      "Make sure thresholds and sills are set so water runs away from the building.",
+      "Seal frames properly once fitted to keep out draughts and rain."
+    ],
+    "overview": "The challenge was altering the existing brickwork safely and fitting the new doors and windows neatly into the openings. The result is a much brighter space with easy access straight out onto the garden.",
+    "file": "project-french-doors.html",
+    "seoTitle": "French Doors & Windows in Merseyside | Cottle Construction",
+    "metaDescription": "French doors and windows fitted in Merseyside: old windows removed, brickwork opened up and new dark grey doors and windows installed."
+  },
+  "paved-pathway": {
+    "title": "Paved Pathway",
+    "category": "Landscaping",
+    "image": "assets/img/portfolio/refurb-paved-path.webp",
+    "headerImage": "assets/img/header/paved-pathway-header.webp",
+    "gallery": [
+      "assets/img/portfolio/refurb-paved-path.webp",
+      "assets/img/portfolio/refurb-doors-paving.webp"
+    ],
+    "intro1": "This job was a new paved pathway running along the side of a building, giving tidy, level access to the doors along that side.",
+    "intro2": "Large paving slabs were laid along the length of the building, with an edging line along the garden side to give the path a clean finish.",
+    "midText": "A path right next to a building has to be laid carefully, with the levels set so rainwater runs away from the walls rather than towards them. The finished path gives a smart, hard-wearing route along the building.",
+    "tipsText": "Good paving is all about what is underneath. A properly prepared base and the right falls make the difference between a path that lasts and one that sinks or holds water.",
+    "tips": [
+      "Dig out and prepare a firm, compacted base before laying slabs.",
+      "Set falls so water drains away from walls and doorways.",
+      "Keep paving below damp proof course level next to the building.",
+      "Use an edging along open sides to stop the path spreading.",
+      "Keep joints even and fill them properly once the slabs are down."
+    ],
+    "overview": "The challenge was laying a long, straight path tight to the building while keeping the levels right for drainage. The finished pathway is level, neat and ready for everyday use.",
+    "file": "project-paved-pathway.html",
+    "seoTitle": "Paved Pathway (Landscaping) in Merseyside | Cottle Construction",
+    "metaDescription": "A new paved pathway laid along a building in Merseyside, with large slabs, a neat edging and levels set to drain water away from the walls."
+  },
+  "stud-walls-panelling": {
+    "title": "Stud Walls & Panelling",
+    "category": "Interior",
+    "image": "assets/img/portfolio/refurb-lounge-panelling.webp",
+    "headerImage": "assets/img/header/panelling-header.webp",
+    "gallery": [
+      "assets/img/portfolio/refurb-lounge-panelling.webp",
+      "assets/img/portfolio/refurb-stud-wall.webp"
+    ],
+    "extraGallery": [
+      "assets/img/portfolio/refurb-blocked-doorway.webp",
+      "assets/img/portfolio/refurb-room.webp"
+    ],
+    "intro1": "These photos show examples of our interior work, from building new timber stud walls and blocking up old doorways to finishing rooms with slatted wood panelling.",
+    "intro2": "Stud walls are framed out in timber and fixed securely so they are ready for boarding, and old doorways are framed and boarded in flush with the surrounding wall, ready for plastering.",
+    "midText": "Slatted panelling adds warmth and character to a room, and it works best when the walls behind it are straight and solid. Whatever the job, getting the framing right first means the finished room looks sharp and lines up properly.",
+    "tipsText": "Interior alterations like these are about solid framing and careful finishing. A straight, secure frame makes boarding, plastering and panelling far easier to get right.",
+    "tips": [
+      "Build stud walls square, level and securely fixed top and bottom.",
+      "Plan cables and sockets before the walls are boarded.",
+      "Frame blocked-up doorways so the infill sits flush with the wall.",
+      "Leave infills ready for plaster so the join disappears once finished.",
+      "Fix panelling to a straight base so the slats line up neatly."
+    ],
+    "overview": "Interior alterations like these need solid framing and careful finishing. From new walls and blocked-up doorways through to feature panelling, we make sure each stage is done properly so the finished room looks right and lasts.",
+    "file": "project-stud-walls-panelling.html",
+    "seoTitle": "Stud Walls & Panelling (Interior) in Merseyside | Cottle Construction",
+    "metaDescription": "Examples of interior work in Merseyside: new timber stud walls, old doorways blocked up ready for plaster, and slatted wood panelling."
+  },
+  "strip-out": {
+    "title": "Strip-Out & Steel Beam",
+    "category": "Structural",
+    "image": "assets/img/portfolio/strip-out-steel-beam.webp",
+    "headerImage": "assets/img/header/strip-out-header.webp",
+    "gallery": [
+      "assets/img/portfolio/strip-out-steel-beam.webp",
+      "assets/img/portfolio/strip-out-room.webp"
+    ],
+    "extraGallery": [
+      "assets/img/portfolio/strip-out-battens.webp"
+    ],
+    "intro1": "This older property was stripped right back to the brick, removing tired plaster and finishes so the walls, ceilings and structure could be properly assessed and renovated.",
+    "intro2": "A steel beam supports an opening in the structure, and the walls were prepared with timber battens ready for the next stage.",
+    "midText": "Stripping a property back shows exactly what you are working with. It means any problems in the brickwork or structure can be dealt with properly before new finishes go on, instead of being covered up.",
+    "tipsText": "A full strip-out is often the best starting point for renovating an older home. Getting the structure right first makes everything that follows easier and longer lasting.",
+    "tips": [
+      "Strip back to the brick to see the true condition of the walls.",
+      "Have structural changes such as steel beams properly planned and supported.",
+      "Deal with damp or damaged brickwork before new finishes go on.",
+      "Use battens to give a straight, even base for boarding.",
+      "Keep the property safe and secure while it is stripped out."
+    ],
+    "overview": "The challenge was taking an older property back to its shell safely and making sure the structure was properly supported for the renovation. With the strip-out done and the steel in place, the property was ready for the rebuild.",
+    "file": "project-strip-out.html",
+    "seoTitle": "Strip-Out & Steel Beam (Structural) in Merseyside | Cottle Construction",
+    "metaDescription": "Property strip-out in Merseyside: an older home stripped back to the brick, with a steel beam supporting an opening and walls battened ready for renovation."
   }
 }

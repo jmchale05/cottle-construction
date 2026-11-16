@@ -82,8 +82,8 @@ def head(title, description, url, header_image, structured_data):
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261106a">
-    <link rel="stylesheet" href="assets/css/cottle-brand.css?v=20261106a">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261116c">
+    <link rel="stylesheet" href="assets/css/cottle-brand.css?v=20261116c">
 
     <script type="application/ld+json">
 {json_ld(structured_data)}
@@ -212,7 +212,7 @@ FOOTER = f'''
     <script src="assets/js/jquery.appear.min.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js?v=20261106a"></script>
+    <script src="assets/js/main.js?v=20261116c"></script>
 
 </body>
 
@@ -327,6 +327,13 @@ def project_page(project):
     }
 
     title = e(project['title'])
+    # Projects with more than two photos list the rest here; every one shows on phones too.
+    extra_gallery = '\n'.join(
+        f'''                                        <div class="col-md-6 mb-20">
+                                            <img src="{image}" alt="{title} detail" loading="lazy">
+                                        </div>'''
+        for image in project.get('extraGallery', [])
+    )
     body = f'''
         <div class="portfolio-single py-120">
             <div class="container">
@@ -367,6 +374,7 @@ def project_page(project):
                                         <div class="col-md-6 mb-20">
                                             <img src="{project['gallery'][1]}" alt="{title} detail" loading="lazy">
                                         </div>
+{extra_gallery}
                                     </div>
                                     <p class="mb-20">{e(project['midText'])}</p>
                                     <div class="my-4">
